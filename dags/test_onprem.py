@@ -1,10 +1,8 @@
 from airflow import DAG
-from airflow.utils.dates import days_ago
 from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import KubernetesPodOperator
 
 with DAG(
     dag_id="test_onprem",
-    start_date=days_ago(1),
     schedule_interval=None,
     catchup=False,
 ) as dag:
