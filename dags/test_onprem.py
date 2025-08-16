@@ -12,7 +12,7 @@ with DAG(
     KubernetesPodOperator(
         task_id="echo-onprem",
         name="echo-onprem",
-        namespace="airflow",  # ✅ airflow namespace 사용
+        namespace="airflow-onprem",
         image="asia-northeast3-docker.pkg.dev/cbx-ai-vision/airflow/airflow-kpo:kpo-4",
         cmds=["/bin/sh", "-c"],
         arguments=["echo RUN_ONPREM_OK && env | sort && sleep 3"],
