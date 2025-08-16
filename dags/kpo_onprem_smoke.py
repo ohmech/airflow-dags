@@ -18,7 +18,7 @@ with DAG(
         arguments=["echo RUN_ONPREM_OK && env | sort && sleep 3"],
         get_logs=True,
         is_delete_operator_pod=True,
-
         in_cluster=False,
         kubernetes_conn_id="kubernetes_onprem",
+        executor_config={"LocalExecutor": {}}   # <= 핵심
     )
