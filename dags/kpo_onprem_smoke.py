@@ -20,5 +20,7 @@ with DAG(
         is_delete_operator_pod=False,
         in_cluster=False,
         kubernetes_conn_id="kubernetes_onprem",
-        executor_config={"LocalExecutor": {}}   # <= 핵심
+        kube_client_request_args={    # ← 핵심
+            "headers": {"User-Agent": "airflow-kpo"}
+        },
     )
