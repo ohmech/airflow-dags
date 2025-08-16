@@ -3,7 +3,7 @@ from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperato
 
 with DAG(
     dag_id="test_onprem",
-    schedule_interval=None,
+    schedule=None,
     catchup=False,
 ) as dag:
     test_task = KubernetesPodOperator(
