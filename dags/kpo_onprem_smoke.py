@@ -19,6 +19,5 @@ with DAG(
         get_logs=True,
         is_delete_operator_pod=False,
         in_cluster=False,
-        kubernetes_conn_id="kubernetes_onprem",
-        executor_config={"LocalExecutor": {}}   # <= 핵심
+        config_file="/opt/onprem/kubeconfig",  # <= 여기!
     )
