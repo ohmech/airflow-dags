@@ -3,7 +3,7 @@ from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperato
 from datetime import datetime
 
 with DAG(
-    dag_id="kpo_onprem_smoke",
+    dag_id="kpo_onprem_test",
     start_date=datetime(2025, 1, 1),
     schedule=None,
     catchup=False,
