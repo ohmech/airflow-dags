@@ -17,6 +17,7 @@ with DAG(
         cmds=["/bin/sh", "-c"],
         arguments=["echo RUN_ONPREM_OK && env | sort && sleep 3"],
         get_logs=True,
+        attach_log=True,
         is_delete_operator_pod=False,
         in_cluster=False,
         kubernetes_conn_id="kubernetes_onprem",
